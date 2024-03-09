@@ -12,26 +12,31 @@
 <body>
     <section class="layout">
         <nav class="layout__nav">
-            <a href="./index.html">
-                <div class="nav__back">
-                    <div class="nav__img-container">
-                        <img src="assets/web-img/recetas.png" alt="recetas">
+            <div>
+                <a href="./index.html">
+                    <div class="nav__back">
+                        <div class="nav__img-container">
+                            <img src="assets/web-img/recetas.png" alt="recetas">
+                        </div>
+                        RECETAS
                     </div>
-                    RECETAS
-                </div>
-            </a>
+                </a>
+            </div>
+            <section class="search__layout hide">
+                <div class="search__bar-container">
+                    <input placeholder="Buscar receta..." id="search" class="search__bar" type="text">
+                    </article>
+            </section>
         </nav>
-        <section class="layout__detalles">
-            <article class="detalles__receta">
-                <div class="detalles__video-container">
 
-                </div>
-                <div class="detalles__info">
-                    <div class="detalles__titulo">
-                        Pollo agridulce
-                    </div>
-                </div>
-            </article>
+        <div class="detalles__info">
+            <div class="detalles__titulo">
+                Pollo agridulce
+            </div>
+        </div>
+
+        <section class="layout__detalles">
+
             <article class="ingredientes__pasos">
                 <div id="ingredientes-list" class="lista__ingredientes">
                     <div class="ingredientes__titulo">Ingredientes:</div>
@@ -40,6 +45,13 @@
                     <div class="pasos__titulo">Pasos:</div>
                 </div>
             </article>
+            <article class="detalles__receta">
+                <div class="detalles__video-container">
+
+                </div>
+
+            </article>
+
         </section>
     </section>
 

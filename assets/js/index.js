@@ -70,7 +70,7 @@ searchBar.addEventListener("input", (e) => {
 
         if (receta.nombre.toLowerCase().includes(e.target.value.toLowerCase())) {
 
-            recetasLayout.innerHTML += `<article class="receta__layout">
+            recetasLayout.innerHTML += `<article data-nombre="${receta.nombre}" class="receta__layout">
             <a href="#">
            
                 <div class="receta__img-container">
