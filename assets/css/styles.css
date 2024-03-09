@@ -127,6 +127,11 @@ body {
   text-wrap: balance;
 }
 
+.receta__layout:hover .receta__nombre {
+  background-color: #cf9e26;
+  border-top: solid 8px rgb(0, 0, 0);
+}
+
 .receta__img-container {
   overflow: hidden;
   width: 300px;
