@@ -8,7 +8,7 @@ recetasLayout.addEventListener("click", (e) => {
 
 
     if (e.target.closest(".receta__layout")) {
-        receta = e.target.closest(".receta__nombre").innerText;
+        receta = e.target.closest(".receta__layout").dataset["nombre"];
         window.location.href = "receta.html?receta=" + receta;
     }
 
@@ -42,7 +42,7 @@ fetch('assets/js/data.json')
         data.forEach(receta => {
             console.log(receta)
 
-            recetasLayout.innerHTML += `<article class="receta__layout">
+            recetasLayout.innerHTML += `<article data-nombre="${receta.nombre}" class="receta__layout">
             <a href="#">
            
                 <div class="receta__img-container">
