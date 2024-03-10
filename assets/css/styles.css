@@ -323,6 +323,40 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.layout__detalles::before {
+  border-radius: 25px;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #ce9e26,
+    #e67a2a,
+    #e76b41,
+    #e73aa4,
+    #e0667b,
+    #e3a562
+  );
+  filter: blur(10px);
+  clip-path: polygon(
+    -8% -8%,
+    -8% 108%,
+    0% 108%,
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 108%,
+    108% 108%,
+    108% -8%
+  );
 }
 
 .detalles__receta {
@@ -365,6 +399,40 @@ body {
   background-color: rgba(29, 29, 29, 0.8);
   text-shadow: 2px 2px 5px #202020;
   padding: 2rem;
+  position: relative;
+}
+
+.detalles__titulo::before {
+  border-radius: 25px;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #ce9e26,
+    #e67a2a,
+    #e76b41,
+    #e73aa4,
+    #e0667b,
+    #e3a562
+  );
+  filter: blur(10px);
+  clip-path: polygon(
+    -8% -8%,
+    -8% 108%,
+    0% 108%,
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 108%,
+    108% 108%,
+    108% -8%
+  );
 }
 
 .ingredientes__pasos {
@@ -397,6 +465,7 @@ body {
   align-items: center;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  box-shadow: 0px 0px 25px 5px #e73aa4;
 }
 
 .ingrediente {
@@ -413,6 +482,7 @@ body {
   justify-content: center;
   align-items: start;
   min-width: 300px;
+  position: relative;
 }
 
 .detalles__video-container::before {
@@ -439,7 +509,7 @@ body {
     #e67a2a,
     #ce9e26
   );
-  filter: blur(1px);
+  filter: blur(10px);
 }
 
 @media (max-width: 500px) {
@@ -478,7 +548,7 @@ body {
       #e67a2a,
       #ce9e26
     );
-    filter: blur(1px);
+    filter: blur(10px);
   }
 
   .detalles__video {
@@ -540,34 +610,9 @@ body {
   align-items: center;
   padding-top: 1rem;
   margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
+  top: calc(-5.4rem - 5px);
+  box-shadow: 0px 0px 25px 5px #e3a562;
 }
-
-/* .pasos__titulo::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: conic-gradient(
-    from 90deg at 50% 50%,
-    #ce9e26,
-    #e67a2a,
-    #e76b41,
-    #e73aa4,
-    #e0667b,
-    #e3a562,
-    #f1ce75,
-    #e3a562,
-    #e0667b,
-    #e73aa4,
-    #e76b41,
-    #e67a2a,
-    #ce9e26
-  );
-  filter: blur(8px);
-} */
 
 .paso {
   color: white;
