@@ -30,6 +30,7 @@ body {
   background-size: auto;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  overflow-x: hidden;
 }
 
 .hide {
@@ -232,6 +233,15 @@ body {
     margin-right: 10px;
   }
 
+  .receta__layout::before {
+    position: absolute;
+    content: "";
+    width: 186px;
+    height: 186px;
+    top: -3px;
+    left: -3px;
+  }
+
   .receta__img-container {
     width: 180px;
     height: 180px;
@@ -253,6 +263,15 @@ body {
     margin-right: 10px;
   }
 
+  .receta__layout::before {
+    position: absolute;
+    content: "";
+    width: 186px;
+    height: 186px;
+    top: -3px;
+    left: -3px;
+  }
+
   .receta__img-container {
     width: 180px;
     height: 180px;
@@ -272,6 +291,15 @@ body {
     margin-bottom: 120px;
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  .receta__layout::before {
+    position: absolute;
+    content: "";
+    width: 206px;
+    height: 206px;
+    top: -3px;
+    left: -3px;
   }
 
   .receta__img-container {
