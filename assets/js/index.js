@@ -94,16 +94,19 @@ setTimeout(() => {
 
     const observerOptions = {
         rootMargin: "0px 0px 0px 0px",
-        threshold: 0.99,
+        threshold: 0.75,
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log("IN");
                 entry.target.style.opacity = "1";
+                entry.target.style.filter = "grayscale(0%)";
+
             } else {
-                entry.target.style.opacity = "0.25";
+                entry.target.style.opacity = "0.5";
+                entry.target.style.filter = "grayscale(100%)";
+
             }
         });
     }, observerOptions);

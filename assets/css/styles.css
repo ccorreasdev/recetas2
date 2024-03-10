@@ -131,6 +131,8 @@ body {
   flex-direction: column;
   position: relative;
   z-index: 2;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
 }
 
 .receta__layout::before {
