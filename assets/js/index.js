@@ -86,3 +86,33 @@ searchBar.addEventListener("input", (e) => {
 
 
 })
+
+setTimeout(() => {
+    const recetaLayout = document.querySelectorAll(".receta__layout");
+
+    console.log("RUN", [...recetaLayout])
+
+    const observerOptions = {
+        rootMargin: "0px 0px 0px 0px",
+        threshold: 0.99,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log("IN");
+                entry.target.style.opacity = "1";
+            } else {
+                entry.target.style.opacity = "0.25";
+            }
+        });
+    }, observerOptions);
+
+    [...recetaLayout].forEach((receta) => {
+        console.log("OBSERVER")
+        observer.observe(receta);
+    })
+}, 1000)
+
+
+
