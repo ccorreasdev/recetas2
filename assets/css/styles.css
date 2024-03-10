@@ -341,7 +341,9 @@ body {
   align-items: center;
   width: 404px;
   height: 404px;
-  border: solid 2px #cf9e26;
+
+  position: relative;
+  z-index: 1;
 }
 
 .detalles__video {
@@ -387,7 +389,7 @@ body {
   color: white;
   font-size: 2.4rem;
   padding-bottom: 1rem;
-  background-color: #cf9e26;
+  background-color: #e73aa4;
   text-shadow: 2px 2px 5px #202020;
   width: 100%;
   display: flex;
@@ -413,6 +415,33 @@ body {
   min-width: 300px;
 }
 
+.detalles__video-container::before {
+  position: absolute;
+  content: "";
+  width: 408px;
+  height: 408px;
+  z-index: -1;
+  top: -2px;
+  left: -2px;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #ce9e26,
+    #e67a2a,
+    #e76b41,
+    #e73aa4,
+    #e0667b,
+    #e3a562,
+    #f1ce75,
+    #e3a562,
+    #e0667b,
+    #e73aa4,
+    #e76b41,
+    #e67a2a,
+    #ce9e26
+  );
+  filter: blur(1px);
+}
+
 @media (max-width: 500px) {
   .detalles__video-container {
     margin-top: 80px;
@@ -423,7 +452,33 @@ body {
     width: 304px;
     width: 100%;
     height: 304px;
-    border: solid 2px #cf9e26;
+  }
+
+  .detalles__video-container::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 6px);
+    height: 308px;
+    z-index: -1;
+    top: -3px;
+    left: -3px;
+    background: conic-gradient(
+      from 90deg at 50% 50%,
+      #ce9e26,
+      #e67a2a,
+      #e76b41,
+      #e73aa4,
+      #e0667b,
+      #e3a562,
+      #f1ce75,
+      #e3a562,
+      #e0667b,
+      #e73aa4,
+      #e76b41,
+      #e67a2a,
+      #ce9e26
+    );
+    filter: blur(1px);
   }
 
   .detalles__video {
@@ -463,7 +518,7 @@ body {
     align-items: center;
     width: 404px;
     height: 404px;
-    border: solid 2px #cf9e26;
+    position: relative;
   }
 
   .detalles__video {
@@ -477,7 +532,7 @@ body {
   color: white;
   font-size: 2.4rem;
   padding-bottom: 1rem;
-  background-color: #cf9e26;
+  background: #e3a562;
   text-shadow: 2px 2px 5px #202020;
   width: 100%;
   display: flex;
@@ -485,7 +540,34 @@ body {
   align-items: center;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
+
+/* .pasos__titulo::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #ce9e26,
+    #e67a2a,
+    #e76b41,
+    #e73aa4,
+    #e0667b,
+    #e3a562,
+    #f1ce75,
+    #e3a562,
+    #e0667b,
+    #e73aa4,
+    #e76b41,
+    #e67a2a,
+    #ce9e26
+  );
+  filter: blur(8px);
+} */
 
 .paso {
   color: white;
