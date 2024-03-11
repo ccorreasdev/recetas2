@@ -315,7 +315,7 @@ body {
 .layout__detalles {
   background-color: rgba(29, 29, 29, 0.8);
   margin: 2rem;
-  border-radius: 25px;
+
   padding: 2rem;
   padding-bottom: 4rem;
   display: flex;
@@ -391,7 +391,6 @@ body {
 }
 
 .detalles__titulo {
-  border-radius: 25px;
   color: white;
   font-size: 3rem;
   width: 100%;
