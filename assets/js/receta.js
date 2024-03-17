@@ -25,9 +25,23 @@ fetch('assets/js/data.json')
 
                 detallesTitulo.innerText = receta.nombre;
 
-                videoContainer.innerHTML += `
-                <video controls="play" class="detalles__video" src="./assets/videos/${receta.nombre}.mp4"></video>
-                `
+
+                fetch(`./assets/videos/${receta.nombre}.mp4`)
+                    .then(response => {
+                        if (response.ok) {
+                            videoContainer.innerHTML += `
+                            <video controls="play" class="detalles__video" src="./assets/videos/${receta.nombre}.mp4"></video>
+                            `
+                        } else {
+                            videoContainer.innerHTML += ``
+                        }
+
+                    })
+                    .catch(error => {
+                        console.log("Error")
+                    })
+
+
 
                 receta.ingrediente.forEach(ingrediente => {
                     ingredientesList.innerHTML += `
