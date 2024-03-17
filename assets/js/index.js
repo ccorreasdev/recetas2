@@ -46,7 +46,7 @@ fetch('assets/js/data.json')
             <a href="#">
            
                 <div class="receta__img-container">
-                
+                    <img class="receta__categorie" src="./assets/web-img/categories/${receta.categoria}.png" alt="categoria">
                     <img class="receta__img" src="./assets/img/${receta.nombre}.png" alt="receta">
                 </div>
                 <div class="receta__nombre">${receta.nombre}</div>
