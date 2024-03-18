@@ -23,7 +23,9 @@ fetch('assets/js/data.json')
 
             if (receta.nombre == recetaNombre) {
 
-                detallesTitulo.innerText = receta.nombre;
+                detallesTitulo.innerHTML = `${receta.nombre} 
+                <img class="receta__categorie" src="./assets/web-img/categories/${receta.categoria}.png" alt="categoria">
+            `;
 
 
                 fetch(`./assets/videos/${receta.nombre}.mp4`)

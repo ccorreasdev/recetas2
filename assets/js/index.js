@@ -1,6 +1,11 @@
 const recetasLayout = document.querySelector("#recetas");
 const searchBar = document.querySelector("#search");
+const filterLayout = document.querySelector(".filter__layout");
+const filterItems = document.querySelectorAll(".filter__item");
+const filterDelete = document.querySelector("#filter-delete");
+
 let recetas;
+let selectedFilter;
 
 recetasLayout.addEventListener("click", (e) => {
 
@@ -74,7 +79,7 @@ searchBar.addEventListener("input", (e) => {
             <a href="#">
            
                 <div class="receta__img-container">
-                
+                    <img class="receta__categorie" src="./assets/web-img/categories/${receta.categoria}.png" alt="categoria">
                     <img class="receta__img" src="./assets/img/${receta.nombre}.png" alt="receta">
                 </div>
                 <div class="receta__nombre">${receta.nombre}</div>
@@ -118,4 +123,73 @@ setTimeout(() => {
 }, 1000)
 
 
+
+filterLayout.addEventListener("click", (e) => {
+
+    if (e.target.closest("div")) {
+        selectedFilter = e.target.closest("div").dataset.name.split("-");
+        console.log(selectedFilter[1]);
+
+
+        if (selectedFilter[1] != "delete") {
+
+            filterItems.forEach((item) => {
+                item.classList.remove("filter__item--active");
+            })
+
+
+            e.target.closest("div").classList.add("filter__item--active");
+            filterDelete.classList.add("filter__item--active");
+            console.log(e.target.closest("div"));
+
+            recetasLayout.innerHTML = "";
+
+            recetas.forEach(receta => {
+
+                if (receta.categoria.toLowerCase().includes(selectedFilter[1].toLowerCase())) {
+
+                    recetasLayout.innerHTML += `<article data-nombre="${receta.nombre}" class="receta__layout">
+                <a href="#">
+               
+                    <div class="receta__img-container">
+                        <img class="receta__categorie" src="./assets/web-img/categories/${receta.categoria}.png" alt="categoria">
+                        <img class="receta__img" src="./assets/img/${receta.nombre}.png" alt="receta">
+                    </div>
+                    <div class="receta__nombre">${receta.nombre}</div>
+                </a>
+            </article>`
+                }
+
+            })
+
+        } else {
+
+            filterItems.forEach((item) => {
+                item.classList.remove("filter__item--active");
+            })
+
+            recetasLayout.innerHTML = "";
+
+            recetas.forEach(receta => {
+                console.log(receta)
+
+                recetasLayout.innerHTML += `<article data-nombre="${receta.nombre}" class="receta__layout">
+                <a href="#">
+               
+                    <div class="receta__img-container">
+                        <img class="receta__categorie" src="./assets/web-img/categories/${receta.categoria}.png" alt="categoria">
+                        <img class="receta__img" src="./assets/img/${receta.nombre}.png" alt="receta">
+                    </div>
+                    <div class="receta__nombre">${receta.nombre}</div>
+                </a>
+            </article>`
+
+            })
+
+
+        }
+
+    }
+
+});
 
