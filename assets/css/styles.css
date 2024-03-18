@@ -591,13 +591,6 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 400px) {
-  .filter__item {
-    width: 25px;
-    height: 25px;
-  }
-}
-
 @media (max-width: 500px) {
   .filter__item {
     width: 35px;
@@ -647,6 +640,13 @@ body {
     height: 300px;
     width: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 400px) {
+  .filter__item {
+    width: 25px;
+    height: 25px;
   }
 }
 
