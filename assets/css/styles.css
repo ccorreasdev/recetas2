@@ -610,7 +610,24 @@ body {
   opacity: 1;
 }
 
+.filter__item__delete--active {
+  opacity: 1;
+  position: relative;
+}
+
 .filter__item--active {
+  opacity: 1;
+  position: relative;
+}
+
+.filter__item--active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -8px;
+  left: 0;
+  background-color: #e73aa4;
   opacity: 1;
 }
 

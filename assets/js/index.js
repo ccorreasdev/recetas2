@@ -139,7 +139,7 @@ filterLayout.addEventListener("click", (e) => {
 
 
             e.target.closest("div").classList.add("filter__item--active");
-            filterDelete.classList.add("filter__item--active");
+            filterDelete.classList.add("filter__item__delete--active");
             console.log(e.target.closest("div"));
 
             recetasLayout.innerHTML = "";
@@ -166,6 +166,7 @@ filterLayout.addEventListener("click", (e) => {
 
             filterItems.forEach((item) => {
                 item.classList.remove("filter__item--active");
+                item.classList.remove("filter__item__delete--active");
             })
 
             recetasLayout.innerHTML = "";
