@@ -71,6 +71,11 @@ searchBar.addEventListener("input", (e) => {
 
     recetasLayout.innerHTML = "";
 
+    filterItems.forEach((item) => {
+        item.classList.remove("filter__item--active");
+        item.classList.remove("filter__item__delete--active");
+    })
+
     recetas.forEach(receta => {
 
         if (receta.nombre.toLowerCase().includes(e.target.value.toLowerCase())) {
